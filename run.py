@@ -72,10 +72,16 @@ def toss_coin(player_name):
     print(Fore.GREEN + f"Welcome to the game, {player_name}!\n")
     print("Let's toss a coin to decide who goes first in the penalty.")
     print(Fore.BLUE + """
-    HEAD    |   TAIL
-            |   _____
-    |___|   |     |
-    |   |   |     |
+    HEAD         | TAIL
+                 |
+        =====    |    =====
+      /       \  |  / _____ \ 
+     |  |   |  | | |    |    |
+     |  |___|  | | |    |    |
+     |  |   |  | | |    |    |
+     |  |   |  | | |    |    |
+      \       /  |  \       /
+        =====    |    =====
     """)
     while True:
         player_choice = input(
@@ -90,9 +96,8 @@ def toss_coin(player_name):
     # Simulate and display the coin toss result
     coin_result = random.choice(['H', 'T'])
     print(
-        Back.BLUE + f"\nThe coin toss result is: "
-        f"{'Head' if coin_result == 'H' else 'Tail'}\n"
-        + Back.RESET
+        f"\n{Back.BLUE}The coin toss result is: "
+        f"{'Head' if coin_result == 'H' else 'Tail'}{Back.RESET}\n"
     )
 
     # Decide who goes first based on the coin toss result
