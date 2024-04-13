@@ -1,6 +1,14 @@
+import os
 import colorama
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
+
+
+def clear_old_term():
+    """
+    Clears the old output in the terminal when called.
+    """
+    os.system("cls" if os.name == "nt" else "clear")
 
 
 def request_player_name():
@@ -21,6 +29,7 @@ def main_menu():
     """Function to print the main menu of the game
     and request the player to enter name before
     playing the game"""
+    clear_old_term()
     print(Fore.YELLOW + """
     ____                           __   __                      
    / __ \\  ___    ____   ____ _   / /  / /_   __  __            
