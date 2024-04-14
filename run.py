@@ -21,7 +21,7 @@ def request_player_name():
                 Fore.YELLOW + "\nEnter your name to start the game: ")
         if not player_name.isalpha():
             print(
-                Fore.RED + "Error: Name should only"
+                Fore.RED + "\nError: Name should only "
                 "contain alphabets A-Z or a-z."
                 )
         elif len(player_name) > 40:
@@ -182,7 +182,91 @@ def choose_goalpost():
     return random.choice(['LT', 'LB', 'C', 'RT', 'RB'])
 
 
+def play_game(player_name):
+    """Function to play the turn-based game.
+    The game ends once the game completed
+    10 turns (5 turns for each player) and
+    either player or opponent have one or
+    more goal advantages over an opponent or
+    player. Otherwise, the game will continue
+    beyond 10 turns if the score result is
+    the same (draw) until either player or
+    opponent have a goal advantage by one after
+    completing each player's turn. The game
+    will end when the final score does not
+    match upon completing both turns."""
+    player_score = 0
+    opponent_score = 0
+    valid_goalposts = ['LT', 'LB', 'C', 'RT', 'RB']
+    turn = 0
+    while True:  # Change this to an infinite loop
+        for player in [player_name, 'Opponent']:
+            turn += 1
+            clear_old_term()
+            print_goalpost()
+            if player == player_name:
+                while True:
+                    player_choice = input(
+                            f"\n{Fore.BLUE}{player_name}, choose a goalpost "
+                            f"to aim your shot (LT, LB, C, RT, RB): "
+                            f"{Fore.RESET}").upper()
+                    if player_choice not in valid_goalposts:
+                        print(
+                            Fore.RED + "\nError: Please choose a valid"
+                            "goalpost (LT, LB, C, RT, RB)." + Fore.RESET
+                            )
+                    else:
+                        break
+                opponent_choice = choose_goalpost()
+                clear_old_term()
+                if player_choice == opponent_choice:
+                    print(f"{Fore.YELLOW}Opponent saves the shot!{Fore.RESET}")
+                    print_save(player)
+                else:
+                    print(f"{Fore.YELLOW}{player_name} scores!{Fore.RESET}")
+                    print_goal(player)
+                    player_score += 1
+            else:
+                opponent_choice = choose_goalpost()
+                while True:
+                    player_choice = input(
+                            f"\n{Fore.BLUE}{player_name}, choose a goalpost "
+                            f"to save the shot (LT, LB, C, RT, RB): "
+                            f"{Fore.RESET}").upper()
+                    if player_choice not in valid_goalposts:
+                        print(
+                            Fore.RED + "\nError: Please choose a valid "
+                            "goalpost (LT, LB, C, RT, RB)." + Fore.RESET)
+                    else:
+                        break
+                clear_old_term()
+                if player_choice == opponent_choice:
+                    print(
+                        f"{Fore.YELLOW}{player_name} "
+                        f"saves the shot!{Fore.RESET}"
+                        )
+                    print_save(player)
+                else:
+                    print(Fore.YELLOW + "Opponent scores!" + Fore.RESET)
+                    print_goal(player)
+                    opponent_score += 1
+            print(
+                f"{Back.BLUE}Score: {player_name} {player_score} - "
+                f"{opponent_score} Opponent{Back.RESET}\n"
+                )
+            if turn >= 10 and player_score != opponent_score:
+                if player_score > opponent_score:
+                    print(f"Congratulations, {player_name}! You won the game!")
+                else:
+                    print("The opponent won the game. Better luck next time!")
+                return
+            elif turn < 10 or player_score == opponent_score:
+                input(Fore.YELLOW + "Press C to continue: " + Fore.RESET)
+                clear_old_term()
+
+
 # Call the various functions to play the game
 player_name = main_menu()
 print(Fore.GREEN + f"Welcome to the game, {player_name}!")
 toss_coin(player_name)
+play_game(player_name)
