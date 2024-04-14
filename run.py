@@ -88,7 +88,7 @@ def toss_coin(player_name):
                 Fore.YELLOW + "Choose H for head or T for tail: ").upper()
         if player_choice not in ['H', 'T']:
             print(
-                Fore.RED + "Error: Please choose either H or T." + Fore.RESET
+                Fore.RED + "\nError: Please choose either H or T.\n" + Fore.RESET
                 )
         else:
             break
@@ -111,6 +111,14 @@ def toss_coin(player_name):
             Back.RED + "You lost the coin toss." + Back.RESET,
             "The opponent will go first.\n"
             )
+
+    # Prompt the player to start the game after the outcome of the toss coin result
+    while True:
+        start = input(Fore.YELLOW + "Press Y to start the game: ").upper()
+        if start != 'Y':
+            print(Fore.RED + "\nError: Please press Y to start the game.\n" + Fore.RESET)
+        else:
+            break
 
 
 # Call the various functions to play the game
