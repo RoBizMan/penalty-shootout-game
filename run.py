@@ -176,6 +176,12 @@ def print_save(player):
     """)
 
 
+def choose_goalpost():
+    """Function for the opponent to choose a target
+    on the goalpost randomly."""
+    return random.choice(['LT', 'LB', 'C', 'RT', 'RB'])
+
+
 # Call the various functions to play the game
 player_name = main_menu()
 print(Fore.GREEN + f"Welcome to the game, {player_name}!")
