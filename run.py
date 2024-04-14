@@ -121,6 +121,16 @@ def toss_coin(player_name):
             break
 
 
+def print_goalpost():
+    """Function to print a visual representation of the goalpost"""
+    print(Fore.YELLOW + """
+    ===================
+    || LT |  C  | RT ||
+    || ------------- ||
+    || LB |  C  | RB ||
+    """ + Fore.RESET)
+
+
 # Call the various functions to play the game
 player_name = main_menu()
 print(Fore.GREEN + f"Welcome to the game, {player_name}!")
