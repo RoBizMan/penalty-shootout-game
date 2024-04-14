@@ -88,7 +88,8 @@ def toss_coin(player_name):
                 Fore.YELLOW + "Choose H for head or T for tail: ").upper()
         if player_choice not in ['H', 'T']:
             print(
-                Fore.RED + "\nError: Please choose either H or T.\n" + Fore.RESET
+                Fore.RED + "\nError: "
+                "Please choose either H or T.\n" + Fore.RESET
                 )
         else:
             break
@@ -112,11 +113,15 @@ def toss_coin(player_name):
             "The opponent will go first.\n"
             )
 
-    # Prompt the player to start the game after the outcome of the toss coin result
+    # Prompt the player to start the game after
+    # the outcome of the toss coin result
     while True:
         start = input(Fore.YELLOW + "Press Y to start the game: ").upper()
         if start != 'Y':
-            print(Fore.RED + "\nError: Please press Y to start the game.\n" + Fore.RESET)
+            print(
+                Fore.RED + "\nError: "
+                "Please press Y to start the game.\n" + Fore.RESET
+                )
         else:
             break
 
@@ -129,6 +134,25 @@ def print_goalpost():
     || ------------- ||
     || LB |  C  | RB ||
     """ + Fore.RESET)
+
+
+def print_goal(player):
+    """Function to print the goal message.
+    Green colour is for the player who takes
+    the penalty and score. Red colour is for
+    the player that fails to save from being
+    scored by the opponent."""
+    color = Fore.GREEN if player == player_name else Fore.RED
+    print(color + """
+       _  _  _         _  _  _  _            _          _                _
+    _ (_)(_)(_) _    _(_)(_)(_)(_)_        _(_)_       (_)              (_)
+   (_)         (_)  (_)          (_)     _(_) (_)_     (_)              (_)
+   (_)    _  _  _   (_)          (_)   _(_)     (_)_   (_)              (_)
+   (_)   (_)(_)(_)  (_)          (_)  (_) _  _  _ (_)  (_)              (_)
+   (_)         (_)  (_)          (_)  (_)(_)(_)(_)(_)  (_)
+   (_) _  _  _ (_)  (_)_  _  _  _(_)  (_)         (_)  (_) _  _  _  _    _
+      (_)(_)(_)(_)    (_)(_)(_)(_)    (_)         (_)  (_)(_)(_)(_)(_)  (_)
+    """)
 
 
 # Call the various functions to play the game
