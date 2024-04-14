@@ -155,6 +155,27 @@ def print_goal(player):
     """)
 
 
+def print_save(player):
+    """Function to print the save message.
+    Green colour is for the player who save
+    the penalty and prevent the opponet from
+    being scored a goal. Red colour is for
+    the player that fails to score a goal
+    as the opponent saves a ball from being
+    scored by the player."""
+    color = Fore.RED if player == player_name else Fore.GREEN
+    print(color + """
+      _  _  _  _            _          _           _    _  _  _  _  _    _
+    _(_)(_)(_)(_)_        _(_)_       (_)         (_)  (_)(_)(_)(_)(_)  (_)
+   (_)          (_)     _(_) (_)_     (_)         (_)  (_)              (_)
+   (_)_  _  _  _      _(_)     (_)_   (_)_       _(_)  (_) _  _         (_)
+     (_)(_)(_)(_)_   (_) _  _  _ (_)    (_)     (_)    (_)(_)(_)        (_)
+    _           (_)  (_)(_)(_)(_)(_)     (_)   (_)     (_)
+   (_)_  _  _  _(_)  (_)         (_)      (_)_(_)      (_) _  _  _  _    _
+     (_)(_)(_)(_)    (_)         (_)        (_)        (_)(_)(_)(_)(_)  (_)
+    """)
+
+
 # Call the various functions to play the game
 player_name = main_menu()
 print(Fore.GREEN + f"Welcome to the game, {player_name}!")
