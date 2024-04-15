@@ -137,7 +137,7 @@ def print_goalpost():
     """ + Fore.RESET)
 
 
-def print_goal(player):
+def print_goal(player, player_name):
     """Function to print the goal message.
     Green colour is for the player who takes
     the penalty and score. Red colour is for
@@ -156,7 +156,7 @@ def print_goal(player):
     """)
 
 
-def print_save(player):
+def print_save(player, player_name):
     """Function to print the save message.
     Green colour is for the player who save
     the penalty and prevent the opponet from
@@ -256,10 +256,10 @@ def play_game(player_name):
                 clear_old_term()
                 if player_choice == opponent_choice:  # Print penalty outcome
                     print(f"{Fore.YELLOW}Opponent saves the shot!{Fore.RESET}")
-                    print_save(player)
+                    print_save(player, player_name)
                 else:
                     print(f"{Fore.YELLOW}{player_name} scores!{Fore.RESET}")
-                    print_goal(player)
+                    print_goal(player, player_name)
                     player_score += 1
             else:
                 opponent_choice = choose_goalpost()
@@ -280,10 +280,10 @@ def play_game(player_name):
                         f"{Fore.YELLOW}{player_name} "
                         f"saves the shot!{Fore.RESET}"
                         )
-                    print_save(player)
+                    print_save(player, player_name)
                 else:
                     print(Fore.YELLOW + "Opponent scores!" + Fore.RESET)
-                    print_goal(player)
+                    print_goal(player, player_name)
                     opponent_score += 1
             # Display the score result after taking each turn
             print(
@@ -314,22 +314,46 @@ def play_game(player_name):
             # or +1 goal advantage if the score is draw at the end
             # of 10 turns
             elif turn < 10 or player_score == opponent_score:
-                while True:  # Change this to allow error handling
+                while True:  # Show continue input until stop by 5(+1 adv) goal
                     continue_key = input(
                             Fore.YELLOW + "Press C to continue: " + Fore.RESET
                             ).upper()
                     if continue_key == 'C':
                         clear_old_term()
                         break
-                    else:
+                    else:  # Change this to allow error handling
                         print(
                             Fore.RED + "\nError: Please press C "
                             "to continue.\n" + Fore.RESET
                             )
 
 
-# Call the various functions to play the game
-player_name = main_menu()
-print(Fore.GREEN + f"Welcome to the game, {player_name}!")
-toss_coin(player_name)
-play_game(player_name)
+def game():
+    while True:
+        player_name = main_menu()
+        print(Fore.GREEN + f"Welcome to the game, {player_name}!")
+        toss_coin(player_name)
+        play_game(player_name)
+
+        # Ask the player if they want to play again or exit
+        while True:
+            print(Fore.YELLOW + "\n1. Play Again\n" + Fore.RESET)
+            print(Fore.YELLOW + "2. Exit Game\n" + Fore.RESET)
+            player_choice = input(
+                                Fore.BLUE + "Enter your choice: "
+                                + Fore.RESET
+                                )
+            if player_choice == '1':
+                break  # Break the inner loop to start a new game
+            elif player_choice == '2':
+                print("\nSad to see you go. Come back and play again soon!\n")
+                return  # End the game
+            else:
+                print(
+                    Fore.RED + "\nInvalid choice. "
+                    "Please enter 1 or 2." + Fore.RESET
+                    )
+
+
+# Call the game function to start the game
+game()
