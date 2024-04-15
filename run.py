@@ -177,6 +177,38 @@ def print_save(player):
     """)
 
 
+def print_win(player):
+    """Function to print the win message.
+    If the player wins the game, then
+    the win message will display."""
+    print(Fore.YELLOW + """
+     _             _    _  _  _    _           _    _
+    (_)           (_)  (_)(_)(_)  (_) _       (_)  (_)
+    (_)           (_)     (_)     (_)(_)_     (_)  (_)
+    (_)     _     (_)     (_)     (_)  (_)_   (_)  (_)
+    (_)   _(_)_   (_)     (_)     (_)    (_)_ (_)  (_)
+    (_)  (_) (_)  (_)     (_)     (_)      (_)(_)
+    (_)_(_)   (_)_(_)   _ (_) _   (_)         (_)   _
+      (_)       (_)    (_)(_)(_)  (_)         (_)  (_)
+    """ + Fore.RESET)
+
+
+def print_lose(player):
+    """Function to print the lose message.
+    If the player loses the game, then
+    the lose message will display."""
+    print(Fore.BLUE + """
+    _                  _  _  _  _        _  _  _  _      _  _  _  _  _    _
+   (_)               _(_)(_)(_)(_)_    _(_)(_)(_)(_)_   (_)(_)(_)(_)(_)  (_)
+   (_)              (_)          (_)  (_)          (_)  (_)              (_)
+   (_)              (_)          (_)  (_)_  _  _  _     (_) _  _         (_)
+   (_)              (_)          (_)    (_)(_)(_)(_)_   (_)(_)(_)        (_)
+   (_)              (_)          (_)   _           (_)  (_)
+   (_) _  _  _  _   (_)_  _  _  _(_)  (_)_  _  _  _(_)  (_) _  _  _  _    _
+   (_)(_)(_)(_)(_)    (_)(_)(_)(_)      (_)(_)(_)(_)    (_)(_)(_)(_)(_)  (_)
+   """ + Fore.RESET)
+
+
 def choose_goalpost():
     """Function for the opponent to choose a target
     on the goalpost randomly."""
@@ -261,8 +293,21 @@ def play_game(player_name):
             # Display the penalty shootout result
             if turn >= 10 and player_score != opponent_score:
                 if player_score > opponent_score:
-                    print(f"Congratulations, {player_name}! You won the game!")
+                    clear_old_term()
+                    print_win(player_name)
+                    print(
+                        f"{Back.BLUE}Score: {player_name} {player_score} - "
+                        f"{opponent_score} Opponent{Back.RESET}\n"
+                        )
+                    print(
+                        f"Congratulations, {player_name}! You won the game!\n"
+                        )
                 else:
+                    print_lose(player_name)
+                    print(
+                        f"{Back.BLUE}Score: {player_name} {player_score} - "
+                        f"{opponent_score} Opponent{Back.RESET}\n"
+                        )
                     print("The opponent won the game. Better luck next time!")
                 return
             # The game will continue until it detects 10 turns has completed
