@@ -46,7 +46,7 @@ def main_menu():
  ___/ /  / / / // /_/ // /_/ // /_  /_____// /_/ // /_/ / / /_
 /____/  /_/ /_/ \\____/ \\____/ \\__/         \\____/ \\__,_/  \\__/
     \n""")
-    print("Instructions:")
+    print("==================== Instructions: ====================\n")
     print("1. A coin toss will decide who goes first.")
     print("2. When shooting, choose a goalpost to aim your shot")
     print("    (LT, LB, C, RT, RB).")
@@ -83,6 +83,7 @@ def toss_coin(player_name):
       \\        /   |  \\        /
         ======     |    ======
     """)
+    # Player input for H or T and error if H or T input not detected
     while True:
         player_choice = input(
                 Fore.YELLOW + "Choose H for head or T for tail: ").upper()
@@ -199,18 +200,20 @@ def play_game(player_name):
     opponent_score = 0
     valid_goalposts = ['LT', 'LB', 'C', 'RT', 'RB']
     turn = 0
-    while True:  # Change this to an infinite loop
+    # Change this to an infinite loop until
+    # the game ends based on turns or +1 goal
+    while True:
         for player in [player_name, 'Opponent']:
             turn += 1
             clear_old_term()
             print_goalpost()
-            if player == player_name:
-                while True:
+            if player == player_name:  # Check if the player wins coin toss
+                while True:  # If win, player start penalty kick first
                     player_choice = input(
                             f"\n{Fore.BLUE}{player_name}, choose a goalpost "
                             f"to aim your shot (LT, LB, C, RT, RB): "
                             f"{Fore.RESET}").upper()
-                    if player_choice not in valid_goalposts:
+                    if player_choice not in valid_goalposts:  # Error handling
                         print(
                             Fore.RED + "\nError: Please choose a valid"
                             "goalpost (LT, LB, C, RT, RB)." + Fore.RESET
@@ -219,7 +222,7 @@ def play_game(player_name):
                         break
                 opponent_choice = choose_goalpost()
                 clear_old_term()
-                if player_choice == opponent_choice:
+                if player_choice == opponent_choice:  # Print penalty outcome
                     print(f"{Fore.YELLOW}Opponent saves the shot!{Fore.RESET}")
                     print_save(player)
                 else:
@@ -228,7 +231,7 @@ def play_game(player_name):
                     player_score += 1
             else:
                 opponent_choice = choose_goalpost()
-                while True:
+                while True:  # Player take goalkeeper while opponent take kick
                     player_choice = input(
                             f"\n{Fore.BLUE}{player_name}, choose a goalpost "
                             f"to save the shot (LT, LB, C, RT, RB): "
@@ -240,7 +243,7 @@ def play_game(player_name):
                     else:
                         break
                 clear_old_term()
-                if player_choice == opponent_choice:
+                if player_choice == opponent_choice:  # Print penalty outcome
                     print(
                         f"{Fore.YELLOW}{player_name} "
                         f"saves the shot!{Fore.RESET}"
@@ -250,19 +253,34 @@ def play_game(player_name):
                     print(Fore.YELLOW + "Opponent scores!" + Fore.RESET)
                     print_goal(player)
                     opponent_score += 1
+            # Display the score result after taking each turn
             print(
                 f"{Back.BLUE}Score: {player_name} {player_score} - "
                 f"{opponent_score} Opponent{Back.RESET}\n"
                 )
+            # Display the penalty shootout result
             if turn >= 10 and player_score != opponent_score:
                 if player_score > opponent_score:
                     print(f"Congratulations, {player_name}! You won the game!")
                 else:
                     print("The opponent won the game. Better luck next time!")
                 return
+            # The game will continue until it detects 10 turns has completed
+            # or +1 goal advantage if the score is draw at the end
+            # of 10 turns
             elif turn < 10 or player_score == opponent_score:
-                input(Fore.YELLOW + "Press C to continue: " + Fore.RESET)
-                clear_old_term()
+                while True:  # Change this to allow error handling
+                    continue_key = input(
+                            Fore.YELLOW + "Press C to continue: " + Fore.RESET
+                            ).upper()
+                    if continue_key == 'C':
+                        clear_old_term()
+                        break
+                    else:
+                        print(
+                            Fore.RED + "\nError: Please press C "
+                            "to continue.\n" + Fore.RESET
+                            )
 
 
 # Call the various functions to play the game
