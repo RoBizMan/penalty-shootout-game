@@ -324,13 +324,14 @@ def game():
 
         # Display the result of the coin toss
         if first_player == player_name:
-            print(Back.GREEN + "\nYou won the coin toss!" + Back.RESET,
-                "You will go first.\n"
+            print(
+                f"\n{Back.GREEN}You won the coin toss!{Back.RESET}"
+                f" You will go first.\n"
                 )
         else:
             print(
-                Back.RED + "\nYou lost the coin toss." + Back.RESET,
-                "The opponent will go first.\n"
+                f"\n{Back.RED}You lost the coin toss.{Back.RESET}"
+                " The opponent will go first.\n"
                 )
 
         # Prompt the player to start the game
