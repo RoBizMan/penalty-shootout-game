@@ -226,15 +226,22 @@ def play_game(player_name, first_player):
         if current_player == player_name:  # Check if the player wins coin toss
             while True:  # If win, player start penalty kick first
                 print("You are the penalty kicker")
+                print(
+                    f"\n{Fore.BLUE}{player_name}, please "
+                    f"select your target {Fore.RESET}"
+                    )
+                print(
+                    f"{Fore.BLUE}area on the goalpost "
+                    f"for your shot.{Fore.RESET}"
+                    )
                 player_choice = input(
-                        f"\n{Fore.BLUE}{player_name}, please select your "
-                        f"target area on the goalpost for your shot "
-                        f"(LT, LB, C, RT, RB): "
-                        f"{Fore.RESET}").upper()
+                                    f"\n{Fore.YELLOW}(LT, LB, C, RT, RB): "
+                                    f"{Fore.RESET}"
+                                    ).upper()
                 if player_choice not in valid_goalposts:  # Error handling
                     print(
-                        Fore.RED + "\nError: Please choose a valid"
-                        "target area (LT, LB, C, RT, RB)." + Fore.RESET
+                        Fore.RED + "\nError: Please choose a valid "
+                        "target area (LT, LB, C, RT, RB).\n" + Fore.RESET
                         )
                 else:
                     break
@@ -251,15 +258,22 @@ def play_game(player_name, first_player):
             opponent_choice = choose_goalpost()
             while True:  # Player take goalkeeper while opponent take kick
                 print("You are the goalkeeper")
+                print(
+                    f"\n{Fore.BLUE}{player_name}, please "
+                    f"select the area on{Fore.RESET}"
+                )
+                print(
+                    f"{Fore.BLUE}the goalpost you "
+                    f"want to defend.{Fore.RESET}"
+                    )
                 player_choice = input(
-                        f"\n{Fore.BLUE}{player_name}, please select the "
-                        f"area on the goalpost you want to defend "
-                        f"(LT, LB, C, RT, RB): "
-                        f"{Fore.RESET}").upper()
+                                    f"\n{Fore.YELLOW}(LT, LB, C, RT, RB): "
+                                    f"{Fore.RESET}"
+                                    ).upper()
                 if player_choice not in valid_goalposts:
                     print(
                         Fore.RED + "\nError: Please choose a valid "
-                        "area (LT, LB, C, RT, RB)." + Fore.RESET)
+                        "area (LT, LB, C, RT, RB).\n" + Fore.RESET)
                 else:
                     break
             clear_old_term()
@@ -304,14 +318,14 @@ def play_game(player_name, first_player):
         elif turn < 10 or player_score == opponent_score:
             while True:  # Show continue input until stop by 5(+1 adv) goal
                 continue_key = input(
-                        Fore.YELLOW + "Press C to continue: " + Fore.RESET
+                        Fore.YELLOW + "Press Enter to continue: " + Fore.RESET
                         ).upper()
-                if continue_key == 'C':
+                if continue_key == '':
                     clear_old_term()
                     break
                 else:  # Change this to allow error handling
                     print(
-                        Fore.RED + "\nError: Please press C "
+                        Fore.RED + "\nError: Please press Enter "
                         "to continue.\n" + Fore.RESET
                         )
 
@@ -337,12 +351,12 @@ def game():
         # Prompt the player to start the game
         while True:
             start = input(
-                        Fore.YELLOW + "Press Y to start the game: "
+                        Fore.YELLOW + "Press Enter to start the game: "
                         + Fore.RESET).upper()
-            if start != 'Y':
+            if start != '':
                 print(
                     Fore.RED + "\nError: "
-                    "Please press Y to start the game.\n" + Fore.RESET
+                    "Please press Enter to start the game.\n" + Fore.RESET
                     )
             else:
                 break
