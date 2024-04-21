@@ -1,32 +1,22 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# [PENALTY SHOOTOUT GAME](https://penalty-shootout-game-8766b5475b75.herokuapp.com)
 
-Welcome,
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/t/RoBizMan/penalty-shootout-game)](https://github.com/RoBizMan/penalty-shootout-game/commits/main)
+[![GitHub last commit](https://img.shields.io/github/last-commit/RoBizMan/penalty-shootout-game)](https://github.com/RoBizMan/penalty-shootout-game/commits/main)
+[![GitHub repo size](https://img.shields.io/github/repo-size/RoBizMan/penalty-shootout-game)](https://github.com/RoBizMan/penalty-shootout-game)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+### Introduction
 
-## Reminders
+Experience the excitement of a realistic penalty shoot-out game from your terminal with our interactive game. This project aims to design an immersive experience that allows users to engage in a simulated penalty shoot-out, making strategic decisions just like in an actual game. The game was created with Python, highlighting the language’s flexibility and strength. This is part of the third portfolio project of the Code Institute course.
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+#### Target Audience ⁤
 
-## Creating the Heroku app
+The primary focus of the target audience is football enthusiasts, gamers, and anyone intrigued by interactive command-line games. Whether you are a seasoned football fan wanting to simulate the thrill of a penalty shoot-out, a casual gamer looking for a quick and fun distraction, or a Python learner interested in seeing what the language can do, this game is for you.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+#### Value Proposition ⁤
 
-1. `heroku/python`
-2. `heroku/nodejs`
+Immerse yourself in penalty shoot-outs from the comfort of your desk. The game goes beyond mere victories or defeats. It is about the path you take and the choices you make. It combines strategy and chance, recreating a real penalty shoot-out's unpredictable nature and high stakes. Each decision you make, whether shooting or guarding the goal, can alter the game. The game is designed to be interactive and enjoyable, regardless of your football knowledge or gaming proficiency.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+![screenshot](documentation/amiresponsive.png)
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+Source: [amiresponsive](https://ui.dev/amiresponsive?url=https://penalty-shootout-game-8766b5475b75.herokuapp.com)
 
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
