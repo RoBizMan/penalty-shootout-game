@@ -20,3 +20,41 @@ Immerse yourself in penalty shoot-outs from the comfort of your desk. The game g
 
 Source: [amiresponsive](https://ui.dev/amiresponsive?url=https://penalty-shootout-game-8766b5475b75.herokuapp.com)
 
+## UX
+
+In this project, I follow the Five Planes of User Experience model invented by Jesse James Garrett.
+
+### Five Planes of User Experience
+
+This model aids in transforming from abstract ideas, such as creating objectives of the project and identifying the user needs, to concrete concepts, such as assembling visual elements together to produce the visual design of the idea to meet the project's objectives and users' needs.
+
+#### The Strategy Plane
+
+This project centred around creating a captivating command-line game that mimics the experience of a football penalty shootout. This game was designed to entertain players, challenge their decision-making abilities, and showcase Python’s development potential.
+
+#### The Scope Plane
+
+The game was designed to incorporate essential elements of a penalty shootout. The included elements are the coin toss for determining who goes first, choosing the target area, deciding which area to defend, and calculating and displaying scores. The game was created to be replayable, offering unique outcomes in every playthrough.
+
+##### Content requirements:
+- Clear and concise guidelines for playing, including shooting and defending.
+- The latest game status, including the score and whose turn it is.
+- Instant feedback on the result of each turn, like whether a shot was successful or saved.
+
+##### Functionality requirements:
+- Players can input their decisions in the game, whether it is selecting a target area for a shot or choosing an area to defend.
+- The game must correctly execute the penalty shoot-out rules, with the user and computer opponent taking turns.
+- The game should have replayability, allowing users to play again without restarting the program.
+
+#### The Structure Plane
+
+Please refer to the [Data Model](#DataModel) section for more detailed data model.
+
+#### The Skeleton Plane
+
+The game’s interface is text-based. Information is presented to the user in a clear and organised manner. The purpose of user input prompts is to be straightforward and clear. The implementation of error handling helps direct the user to valid inputs.
+
+#### The Surface Plane
+
+[Click here to view the live site.](https://penalty-shootout-game-8766b5475b75.herokuapp.com/)
+
