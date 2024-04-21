@@ -58,3 +58,15 @@ The game’s interface is text-based. Information is presented to the user in a 
 
 [Click here to view the live site.](https://penalty-shootout-game-8766b5475b75.herokuapp.com/)
 
+## User Stories
+
+### New Site Users
+
+- As a new site user, I would like to understand how to play the game so I can start playing without confusion.
+- As a new site user, I would like to get immediate feedback on my actions to understand the consequences of my decisions in the game.
+- As a new site user, I would like to see my current score and progress in the game to keep track of my progress.
+
+### Returning Site Users
+
+- As a returning site user, I would like to be able to start a new game quickly so that I can jump back into the action without unnecessary delays.
+- As a returning site user, I would like to replay the game with the same consistent experience so that I can continue to enjoy it.
