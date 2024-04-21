@@ -130,3 +130,48 @@ Whoever scores 5 goals within 10 turns or has a +1 goal advantage with more than
 - [MyDraw](https://www.mydraw.com/) used to create a flowchart.
 - [CI Python Linter](https://pep8ci.herokuapp.com/#) used to maintain high quality of Python programming.
 
+## Data Model
+
+### Flowchart
+
+To follow best practice, a flowchart was created for the game's logic, and mapped out before coding began using a paid version of [MyDraw](https://www.mydraw.com/).
+
+Below is the flowchart of the main process of this Python program. It shows the entire cycle of the program.
+
+**Screenshot of the flowchart here**
+
+### Functions
+
+The primary functions used on this application are:
+
+- `clear_old_term()`
+    - Clear the previous terminal output.
+- `request_player_name()`
+    - Ask the player to input their name and their name is used throughout the game.
+- `main_menu()`
+    - The main menu of the game that contains instructions of the game and request player's name before continuing the game.
+- `toss_coin()`
+    - Ask the player to choose a head or a tail before tossing a coin to determine who takes the penalty kick first.
+- `print_goalpost()`
+    - A reusable ASCII image of goalpost throughout the penalty shooutout game.
+- `print_goal()`
+    -  A reusable ASCII image of GOAL throughout the penalty shooutout game.
+- `print_save()`
+    - A reusable ASCII image of SAVE throughout the penalty shootout game.
+- `print_win()`
+    -  A reusable ASCII image of WIN at the end of the penalty shootout result.
+- `print_lose()`
+    - A reusable ASCII image of LOSE at the end of the penalty shootout result.
+- `choose_goalpost()`
+    -  A reusable function to randomise the opponent's goalpost target choice on every turn.
+- `play_game()`
+    - The penalty shootout game.
+- `game()`
+    - Runs all program functions and asks the player to restart the game or exit the game.
+
+### Imports
+
+I have used the following Python packages and external imported packages:
+- `os`: used for adding a `clear_old_term()` function
+- `colorama`: used for including color in the terminal
+- `random`: used to get a random choice from a list
