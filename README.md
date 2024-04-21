@@ -70,3 +70,50 @@ The game’s interface is text-based. Information is presented to the user in a 
 
 - As a returning site user, I would like to be able to start a new game quickly so that I can jump back into the action without unnecessary delays.
 - As a returning site user, I would like to replay the game with the same consistent experience so that I can continue to enjoy it.
+
+## Features
+
+### Existing Features
+
+- **Main Menu**
+
+When the file is loaded, this is the first page that features the ASCII image of Penalty Shootout with instructions for the game. Ultimately, the game asks the player to input their name before starting. Also, it displays the error handling message to guide the player in inputting the correct one.
+
+| Start | End |
+| - | - |
+| ![screenshot](documentation/feature1start.png) | ![screenshot](documentation/feature1end.png) |
+| ![screenshot](documentation/feature1error.png) | - |
+
+- **Coin Toss**
+
+The coin toss allows the game to determine who should take the penalty kick first. It contains the coin that gives the player a head or a tail. Once chosen, the game will display the outcome of the coin toss with a green or red background to tell if you have won or lost the coin toss. Also, it displays the error handling message to guide the player in inputting the correct one.
+
+| Start | End |
+| - | - |
+| ![screenshot](documentation/feature2start.png) | ![screenshot](documentation/feature2enda.png) ![screenshot](documentation/feature2endb.png)|
+| ![screenshot](documentation/feature2errora.png) | ![screenshot](documentation/feature2errorb.png) |
+
+- **Penalty Shootout game**
+
+The penalty shootout game starts with either the player or the opponent taking the first penalty kick based on the outcome of the coin toss result. The game displays the ASCII image of the goalpost guiding the player of a target area to save or to score depending on their turn. It will then display whether the player scores as a penalty kicker or save as a goalkeeper. Also, it shows the error handling message to guide the player in inputting the correct one.
+
+| Start | End |
+| - | - |
+| ![screenshot](documentation/feature3starta.png) | ![screenshot](documentation/feature3enda.png) ![screenshot](documentation/feature3endb.png)|
+| ![screenshot](documentation/feature3startb.png) | ![screenshot](documentation/feature3endc.png) ![screenshot](documentation/feature3endd.png) |
+| ![screenshot](documentation/feature3errora.png) | ![screenshot](documentation/feature3errorb.png) |
+
+- **Penalty Shootout result**
+
+Whoever scores 5 goals within 10 turns or has a +1 goal advantage with more than 10 turns wins the game. The result will be displayed whether the player wins the game or not. Finally, the player will be asked whether to restart the game or exit the game. Also, it shows the error handling message to guide the player in inputting the correct one.
+
+| Start | End |
+| - | - |
+| ![screenshot](documentation/feature4starta.png) | ![screenshot](documentation/feature4enda.png) ![screenshot](documentation/feature4endb.png)|
+| ![screenshot](documentation/feature4startb.png) | ![screenshot](documentation/feature4endc.png) ![screenshot](documentation/feature4endd.png) |
+| ![screenshot](documentation/feature4error.png) | - |
+
+### Future Features
+
+- Realistic team names imported from the real-world football data.
+- Offers the player to play the knock-out game where the player wins the penalty shootout and is advanced to the next round from 1/16 to the final.
