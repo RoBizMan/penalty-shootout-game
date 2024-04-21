@@ -25,7 +25,7 @@ def request_player_name():
                 "contain alphabets A-Z or a-z."
                 )
         elif len(player_name) > 40:
-            print(Fore.RED + "Error: Name should not exceed 40 characters.")
+            print(Fore.RED + "\nError: Name should not exceed 40 characters.")
         else:
             return player_name
 
