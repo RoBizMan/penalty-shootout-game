@@ -283,3 +283,31 @@ You can fork this repository by using the following steps:
 ### Local VS Deployment
 
 There is a noticeable difference between local and deployment. The os function allows CLI to clear the entire previous terminal output before replacing it with the new terminal output. This function was able to clear the entire terminal output in local. However, when deployed to Heroku, the os function only clears 24 lines rather than the entire terminal output, regardless of the terminal window size. This is a known issue. Additionally, the colorama function appears to display in normal colour in the local terminal window, but the same appeared a bit darker and dull in Heroku.
+
+## Credits
+
+| Source | Notes |
+| --- | --- |
+| [Markdown Builder](https://tim.2bn.dev/markdown-builder) | tool to help generate the Markdown files |
+| [Trinket](https://trinket.io/python/909d6c5804) | Penalty Shoot-out game idea |
+| [GitHub](https://github.com/Shivam010/Penalty-ShootOut-Game) | Penalty Shoot-out project |
+| [Econowmics](https://econowmics.com/python-penalty-kicks-simulator/) | Penalty game idea |
+| [101Computing](https://www.101computing.net/penalty-shootout/) | Penalty game tutorial |
+| [StackOverflow](https://stackoverflow.com/questions/74767124/loops-and-recalling-variables-in-python-im-coding-a-guessing-game-using-a-rand) | Generate game randomiser |
+| [StackOverflow](https://stackoverflow.com/questions/50012693/how-to-switch-between-players-in-tic-tac-toe-in-python) | Detect player or opponent's turn |
+| [YouTube](https://www.youtube.com/watch?v=Yq5tL6be0Yk) | Use Colorama in Python project |
+| [GeeksforGeeks](https://www.geeksforgeeks.org/clear-screen-python/) | Use import os to clear terminal output |
+| [Stackademic](https://blog.stackademic.com/mastering-the-art-of-writing-clear-and-effective-git-commit-messages-9d4ce0130dfd) | Write clear and effective Git Commit messages |
+
+### Media
+
+No media was used for this project.
+
+### Acknowledgements
+
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support and feedback throughout the development of this project.
+- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their visual guidance and clarifications throughout all concepts I might not have initially understood.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome and kept me sane.
+- I would like to thank my partner, for believing in me, and encouraging me to make this transition into software development.
+- I would like to thank my parents and grandparents for trusting that I could make a smooth transition into a new career pathway.
+- I would like to thank my friends for playing my Python game and feeding me with their feedback so that I can eliminate any undiscovered bugs that I might not have noticed.
