@@ -49,3 +49,12 @@ Defensive programming was manually tested with the below user acceptance testing
 | | When the player wants to reset the game, it is expected to restart the game and go back to the main menu. | Tested by restarting the game within the CLI. | The feature behaved as expected, and it returned to the main menu | Test concluded and passed | ![screenshot](documentation/defensive4a.png) |
 | | When the player wants to exit the game, it is expected to display the message that the game is exited and no more input is being accepted. | Tested by choosing to exit the game within the terminal. | The feature behaved as expected, and it ended the game and no further input is accepted. | Test concluded and passed | ![screenshot](documentation/defensive4b.png) |
 | | When the player inputs any keys other than 1 or 2, it is expected to display the error and tell a player to choose between 1 or 2. | Tested the choice input by adding Space key, pressing Enter button, and randomly typing u, %, 3 and 1a. | The feature behaved as expected, and it handled the error well. | Test concluded and passed | ![screenshot](documentation/defensive4ca.png) ![screenshot](documentation/defensive4cb.png) ![screenshot](documentation/defensive4cc.png) |
+## User Story Testing
+
+| User Story | Screenshot |
+| --- | --- |
+| As a new site user, I would like to understand how to play the game so I can start playing without confusion. | ![screenshot](documentation/feature1start.png) ![screenshot](documentation/feature1end.png) |
+| As a new site user, I would like to get immediate feedback on my actions to understand the consequences of my decisions in the game. | ![screenshot](documentation/feature2enda.png) ![screenshot](documentation/feature2endb.png) ![screenshot](documentation/feature3enda.png) ![screenshot](documentation/feature3endb.png) |
+| As a new site user, I would like to see my current score and progress in the game to keep track of my progress. | ![screenshot](documentation/feature3endc.png) ![screenshot](documentation/feature3endd.png) |
+| As a returning site user, I would like to be able to start a new game quickly so that I can jump back into the action without unnecessary delays. | ![screenshot](documentation/feature4startb.png) |
+| As a returning site user, I would like to replay the game with the same consistent experience so that I can continue to enjoy it. | ![screenshot](documentation/feature4starta.png) ![screenshot](documentation/feature4enda.png) |
