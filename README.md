@@ -140,7 +140,7 @@ To follow best practice, a flowchart was created for the game's logic, and mappe
 
 Below is the flowchart of the main process of this Python program. It shows the entire cycle of the program.
 
-**Screenshot of the flowchart here**
+![screenshot](documentation/flowchart.png)
 
 ### Functions
 
