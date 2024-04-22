@@ -49,6 +49,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | When the player wants to reset the game, it is expected to restart the game and go back to the main menu. | Tested by restarting the game within the CLI. | The feature behaved as expected, and it returned to the main menu | Test concluded and passed | ![screenshot](documentation/defensive4a.png) |
 | | When the player wants to exit the game, it is expected to display the message that the game is exited and no more input is being accepted. | Tested by choosing to exit the game within the terminal. | The feature behaved as expected, and it ended the game and no further input is accepted. | Test concluded and passed | ![screenshot](documentation/defensive4b.png) |
 | | When the player inputs any keys other than 1 or 2, it is expected to display the error and tell a player to choose between 1 or 2. | Tested the choice input by adding Space key, pressing Enter button, and randomly typing u, %, 3 and 1a. | The feature behaved as expected, and it handled the error well. | Test concluded and passed | ![screenshot](documentation/defensive4ca.png) ![screenshot](documentation/defensive4cb.png) ![screenshot](documentation/defensive4cc.png) |
+
 ## User Story Testing
 
 | User Story | Screenshot |
@@ -58,3 +59,14 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a new site user, I would like to see my current score and progress in the game to keep track of my progress. | ![screenshot](documentation/feature3endc.png) ![screenshot](documentation/feature3endd.png) |
 | As a returning site user, I would like to be able to start a new game quickly so that I can jump back into the action without unnecessary delays. | ![screenshot](documentation/feature4startb.png) |
 | As a returning site user, I would like to replay the game with the same consistent experience so that I can continue to enjoy it. | ![screenshot](documentation/feature4starta.png) ![screenshot](documentation/feature4enda.png) |
+
+## Bugs
+
+| Issue number | Bugs encountered | Link to GitHub Issues tickets |
+| - | - | - |
+| 1 | The outcome of the coin toss printed with the blue background occupied in the whole line | https://github.com/RoBizMan/penalty-shootout-game/issues/1 |
+| 2 | Icons of head and tail coins caused the error "W605 invalid escape sequence '\ '" | https://github.com/RoBizMan/penalty-shootout-game/issues/2 |
+| 3 | The game ends without announcing the result who won when the score reaches 5-4 | https://github.com/RoBizMan/penalty-shootout-game/issues/3 |
+| 4 | The game continues with any key pressed in the between penalty shootout outcome | https://github.com/RoBizMan/penalty-shootout-game/issues/4 |
+| 5 | The human player starts the game first even thought they lost the coin toss to the opponent | https://github.com/RoBizMan/penalty-shootout-game/issues/5 |
+| 6 | Colorama syntax caused a new line to display the whole line in colour despite inserting the reset syntax | https://github.com/RoBizMan/penalty-shootout-game/issues/6 |
