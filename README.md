@@ -37,11 +37,13 @@ This project centred around creating a captivating command-line game that mimics
 The game was designed to incorporate essential elements of a penalty shootout. The included elements are the coin toss for determining who goes first, choosing the target area, deciding which area to defend, and calculating and displaying scores. The game was created to be replayable, offering unique outcomes in every playthrough.
 
 ##### Content requirements:
+
 - Clear and concise guidelines for playing, including shooting and defending.
 - The latest game status, including the score and whose turn it is.
 - Instant feedback on the result of each turn, like whether a shot was successful or saved.
 
 ##### Functionality requirements:
+
 - Players can input their decisions in the game, whether it is selecting a target area for a shot or choosing an area to defend.
 - The game must correctly execute the penalty shoot-out rules, with the user and computer opponent taking turns.
 - The game should have replayability, allowing users to play again without restarting the program.
@@ -277,3 +279,7 @@ You can fork this repository by using the following steps:
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/RoBizMan/penalty-shootout-game)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
+
+### Local VS Deployment
+
+There is a noticeable difference between local and deployment. The os function allows CLI to clear the entire previous terminal output before replacing it with the new terminal output. This function was able to clear the entire terminal output in local. However, when deployed to Heroku, the os function only clears 24 lines rather than the entire terminal output, regardless of the terminal window size. This is a known issue. Additionally, the colorama function appears to display in normal colour in the local terminal window, but the same appeared a bit darker and dull in Heroku.
