@@ -70,3 +70,12 @@ Defensive programming was manually tested with the below user acceptance testing
 | 4 | The game continues with any key pressed in the between penalty shootout outcome | https://github.com/RoBizMan/penalty-shootout-game/issues/4 |
 | 5 | The human player starts the game first even thought they lost the coin toss to the opponent | https://github.com/RoBizMan/penalty-shootout-game/issues/5 |
 | 6 | Colorama syntax caused a new line to display the whole line in colour despite inserting the reset syntax | https://github.com/RoBizMan/penalty-shootout-game/issues/6 |
+
+## Unfixed Bugs
+
+| Issue number | Bugs encountered | Link to GitHub Issues tickets |
+| - | - | - |
+| 1 | os clear previous terminal output does not actually clear entirely in the deployed Heroku environment | https://github.com/RoBizMan/penalty-shootout-game/issues/8 |
+
+> [!NOTE]  
+> There are no remaining bugs that I am aware of.
