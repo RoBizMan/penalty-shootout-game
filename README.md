@@ -50,7 +50,7 @@ The game was designed to incorporate essential elements of a penalty shootout. T
 
 #### The Structure Plane
 
-Please refer to the [Data Model](#DataModel) section for more detailed data model.
+Please refer to the [Data Model](#Data-Model) section for more detailed data model.
 
 #### The Skeleton Plane
 
