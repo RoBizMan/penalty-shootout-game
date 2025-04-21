@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: penalty-shootout-game
+    env: node
+    buildCommand: npm install && pip install -r requirements.txt
+    startCommand: node index.js
